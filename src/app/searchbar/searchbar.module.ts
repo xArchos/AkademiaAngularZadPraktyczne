@@ -5,19 +5,24 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {SearchbarComponent} from './searchbar/searchbar.component';
+import {HttpClientModule} from "@angular/common/http";
+import {MatButtonModule} from "@angular/material/button";
+
 
 @NgModule({
   declarations: [
     SearchbarComponent
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
 
     MatAutocompleteModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   exports: [
     SearchbarComponent
