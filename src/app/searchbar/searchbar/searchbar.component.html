@@ -1,0 +1,10 @@
+<mat-form-field>
+
+  <input matInput placeholder="Search..." [matAutocomplete]="auto" [formControl]="phraseCtrl">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let phrase of filteredPhrases | async" [value]="phrase">
+      <span>{{phrase}}</span>
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="searchInGoogle()">Search</button>
