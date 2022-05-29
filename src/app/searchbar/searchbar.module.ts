@@ -7,6 +7,7 @@ import {CommonModule} from '@angular/common';
 import {SearchbarComponent} from './searchbar/searchbar.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
+import {SearchbarRoutingModule} from  './searchbar-routing.module';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import {MatButtonModule} from "@angular/material/button";
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    CommonModule,
+    SearchbarRoutingModule
   ],
   exports: [
     SearchbarComponent
